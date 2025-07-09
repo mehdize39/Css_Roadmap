@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
       @font-face {
         font-family: "lato";
@@ -41,21 +42,6 @@
       }
       .text-white {
         color: white;
-      }
-      .block {
-        display: block;
-      }
-      .inline-block {
-        display: inline-block;
-      }
-      .inline {
-        display: inline;
-      }
-      .didden {
-        display: none;
-      }
-      .flex {
-        display: flex;
       }
       .justifiy-between {
         justify-content: space-between;
@@ -101,9 +87,7 @@
       .rounded-full {
         border-radius: 9999px;
       }
-      .font-bold {
-        font-weight: bold;
-      }
+
       .uppercase {
         text-transform: uppercase;
       }
@@ -138,8 +122,19 @@
         margin-left: auto;
         margin-right: auto;
       }
-
+      .text-16px {
+        font-size: 16px;
+      }
+      .text-36px {
+        font-size: 36px;
+      }
       @media (min-width: 640px) {
+        .sm\:text-60px {
+          font-size: 60px;
+        }
+        .sm\:text-20px {
+          font-size: 20px;
+        }
       }
     </style>
   </head>
@@ -150,12 +145,14 @@
     >
       <div class="flex justifiy-center item-center">
         <img src="/public/images/logo.svg" alt="" style="margin-right: 50px" />
-        <a href="" class="text-white py-8 px-16">Pricing</a>
-        <a href="" class="text-white py-8 px-16">Curses</a>
-        <a href="" class="text-white py-8 px-16">Blog</a>
-        <a href="" class="text-white py-8 px-16">Forum</a>
+        <nav class="hidden md:block">
+          <a href="" class="text-white py-8 px-16">Pricing</a>
+          <a href="" class="text-white py-8 px-16">Curses</a>
+          <a href="" class="text-white py-8 px-16">Blog</a>
+          <a href="" class="text-white py-8 px-16">Forum</a>
+        </nav>
       </div>
-      <div class="flex item-center">
+      <div class="flex item-center hidden md:flex">
         <a href="" class="text-white py-8 px-16" style="margin-right: 12px"
           >Login</a
         >
@@ -173,7 +170,7 @@
         playsinline
         muted="muted"
         class="w-full object-cover absolute"
-        style="height: 689px; top: -77px"
+        style="height: 689px; top: -80px"
         src="./public/videos/galaxy.b6c8fb5.mp4"
       ></video>
       <div
@@ -181,19 +178,19 @@
         class="mx-auto"
       >
         <div class="relative z-10" style="max-width: 570px">
-          <h1 style="font-size: 60px" class="text-white">
+          <h1 class="text-white text-36px sm:text-60px font-bold leading-none">
             Turbocharge your
             <span class="text-brand-teal">development career</span>
           </h1>
           <p
-            class="text-white"
-            style="max-width: 455px; font-size: 20px; margin-top: 30px"
+            class="text-white text-16px sm:text-20px"
+            style="max-width: 455px; margin-top: 30px"
           >
             Chris Courses provides students and professionals a college-level
             web development education.
           </p>
           <button
-            style="margin-top: 28px"
+            style="margin-top: 28px; border-radius: 4px"
             class="bg-white text-brand-teal-dark border-none py-12 px-28"
           >
             Get started
